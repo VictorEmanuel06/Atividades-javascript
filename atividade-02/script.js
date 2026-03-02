@@ -88,7 +88,7 @@ Tudo em minúsculo
 
 Quantidade de caracteres (use .length)*/
 
-let nome = "victor emanuel";
+let nome = "Victor Emanuel";
 
 console.log("Nome normal " + nome);
 console.log(`Nome Maiúsculo ${nome.toUpperCase()}`);
