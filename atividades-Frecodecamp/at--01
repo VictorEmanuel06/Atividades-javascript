@@ -1,0 +1,30 @@
+// const pessoa = {
+//     nome: "Victor",
+//     idade: 19,
+//     cidade: "São Paulo"
+// };
+
+// console.log(pessoa.nome);
+// console.log(pessoa.idade);
+// console.log(pessoa.cidade);
+
+const oddObject = {
+    "1sfProperty" : "Olá",
+    "Propriedade com espaços" : "mundo"
+};
+
+// console.log(oddObject ["1sfProperty"] );
+// console.log(oddObject ["Propriedade com espaços"]);
+
+const pessoa = {
+    nome: "Victor",
+    idade: 19,
+    cidade: "São Paulo"
+};
+
+let propertyName = "cidade";
+console.log( pessoa [ propertyName ] );
+
+
+delete pessoa.idade;
+console.log(pessoa.idade);
