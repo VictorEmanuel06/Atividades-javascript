@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput, } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
@@ -55,15 +55,28 @@ export default function Home() {
       <View style={styles.caixa_consciente}>
 
         <View style={styles.conteudo_superior}>
-          <Octicons name="verified" size={24} color="black" />
-          <Text>
-            COMPRA CONSCIENTE
-          </Text>
 
-          <Text>
-            Produtos com formulação transparente e
-            segurança testada para sua casa e família.
-          </Text>
+          <View style={styles.icone_verificar}>
+            <MaterialIcons name="verified" size={24} color="#5B2A7A" />
+          </View>
+
+          <View style={styles.bloco_textos}>
+            <Text style={styles.h1}>
+              COMPRA CONSCIENTE
+            </Text>
+
+            <Text style={styles.p}>
+              Produtos com formulação transparente e
+              segurança testada para sua casa e família.
+            </Text>
+          </View>
+
+        </View>
+
+        <View>
+          <TouchableOpacity>
+            <Text>Conhecer selos</Text>
+          </TouchableOpacity>
         </View>
 
       </View>
@@ -94,29 +107,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   location: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: 5,
     marginLeft: 10,
-  },
-
-  conteudo_superior: {
-    flexDirection: 'row',
-  },
-
-  caixa_consciente: {
-    height: 200,
-    width: 380,
-
-    margin: 20,
-
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: '#F4EEF7',
-    backgroundColor: '#F4EEF7',
-
   },
 
   endereco: {
@@ -138,5 +135,48 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 55,
     marginHorizontal: 10,
-  }
+  },
+
+  conteudo_superior: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    margin: 10,
+  },
+
+  icone_verificar: {
+    backgroundColor: '#ffffff',
+    width: 30,
+    height: 30,
+    borderRadius: 10,
+    borderColor: '#DDD4E2',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  bloco_textos: {
+    flex: 1,
+    marginLeft: '20',
+    textAlign: 'left'
+  },
+
+  h1: {
+    color: '#5B2A7A',
+    fontSize: 15,
+    fontWeight: 'bold'
+  },
+
+  caixa_consciente: {
+    height: 200,
+    width: 380,
+
+    margin: 20,
+
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#F4EEF7',
+    backgroundColor: '#F4EEF7',
+
+  },
+
+
 });
