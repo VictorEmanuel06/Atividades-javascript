@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 import Input from './Input';
 import CompraConsciente from './CompraConsciente';
@@ -8,6 +8,7 @@ import Recomendados from './Recomendados';
 
 export default function Home() {
   return (
+    <ScrollView>
       <View>
 
         {/* HEADER */}
@@ -32,6 +33,7 @@ export default function Home() {
 
 
       </View>
+    </ScrollView>
   );
 }
 
