@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import Input from './Input';
 import CompraConsciente from './CompraConsciente';
 import Header from './Header';
+import Categorias from './Categorias';
 
 export default function Home() {
   return (
@@ -20,6 +21,9 @@ export default function Home() {
 
         <CompraConsciente />
 
+        {/* CATEGORIAS */}
+
+        <Categorias />
 
       </View>
   );

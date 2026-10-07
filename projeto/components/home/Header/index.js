@@ -33,17 +33,17 @@ const styles = StyleSheet.create({
     },
 
     blocoEsquerdo: {
-        
     },
 
     textTop: {
         fontSize: 30,
-        marginLeft: 15,
-        marginBottom: 20
+        fontWeight: 600,
+        marginBottom: 5,
     },
 
     text: {
         color: 'grey',
+        marginLeft: 3,
     },
 
     iconeSino: {
@@ -69,5 +69,6 @@ const styles = StyleSheet.create({
     endereco: {
         flexDirection: 'row',
         alignItems: 'center',
+        marginBottom: 10,
     },
 });

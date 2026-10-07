@@ -34,6 +34,18 @@ export default function CompraConsciente() {
 }
 
 const styles = StyleSheet.create({
+
+    caixa_consciente: {
+        height: 200,
+        width: 340,
+        marginTop: 20,
+        marginLeft: 9,
+        borderRadius: 12,
+        borderWidth: 1,
+        borderColor: '#DDD4E2',
+        backgroundColor: '#F4EEF7',
+    },
+
     conteudo_superior: {
         flexDirection: 'row',
         alignItems: 'flex-start',
@@ -67,16 +79,7 @@ const styles = StyleSheet.create({
         maxWidth: 120
     },
 
-    caixa_consciente: {
-        height: 200,
-        width: 380,
-        marginTop: 20,
-        marginLeft: 16,
-        borderRadius: 12,
-        borderWidth: 1,
-        borderColor: '#DDD4E2',
-        backgroundColor: '#F4EEF7',
-    },
+
 
     // Botão Conhecer selos
 
