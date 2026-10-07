@@ -1,5 +1,10 @@
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { View, StyleSheet, Text, TouchableOpacity, ScrollView } from 'react-native';
+import { Host, Icon } from '@expo/ui/jetpack-compose';
+import CleaningServices from '@expo/material-symbols/cleaning_services.xml';
+import soap from '@expo/material-symbols/soap.xml';
+import sanitizer from '@expo/material-symbols/sanitizer.xml';
+import eco from '@expo/material-symbols/eco.xml';
+import spa from '@expo/material-symbols/spa.xml';
 
 export default function Categorias() {
   return (
@@ -14,27 +19,82 @@ export default function Categorias() {
 
       <View style={styles.listaCategorias}>
 
-        <View style={styles.limpeza}>
-          <TouchableOpacity style={styles.buttomLimpeza}><MaterialIcons name="cleaning-services" size={30} color="#7A3FA0" /></TouchableOpacity>
-          <Text style={styles.textLimpeza}>Limpeza</Text>
-        </View>
+        {/* LIMPEZA */}
 
-        <View style={styles.limpeza}>
-          <TouchableOpacity style={styles.buttomLimpeza}><MaterialIcons name="cleaning-services" size={30} color="#7A3FA0" /></TouchableOpacity>
-          <Text style={styles.textLimpeza}>Higiene</Text>
-        </View>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <View style={styles.containerButton}>
+            <TouchableOpacity style={styles.buttom}>
+              <Host matchContents>
+                <Icon
+                  source={CleaningServices}
+                  size={30}
+                  tint="#7A3FA0"
+                />
+              </Host>
+            </TouchableOpacity>
+            <Text style={styles.text}>Limpeza</Text>
+          </View>
 
+          {/* HIGIENE */}
 
-        <View style={styles.limpeza}>
-          <TouchableOpacity style={styles.buttomLimpeza}><MaterialIcons name="cleaning-services" size={30} color="#7A3FA0" /></TouchableOpacity>
-          <Text style={styles.textLimpeza}>Saneantes</Text>
-        </View>
+          <View style={styles.containerButton}>
+            <TouchableOpacity style={styles.buttom}>
+              <Host matchContents>
+                <Icon
+                  source={soap}
+                  size={30}
+                  tint="#7A3FA0"
+                />
+              </Host>
+            </TouchableOpacity>
+            <Text style={styles.text}>Higiene</Text>
+          </View>
 
-        <View style={styles.limpeza}>
-          <TouchableOpacity style={styles.buttomLimpeza}><MaterialIcons name="cleaning-services" size={30} color="#7A3FA0" /></TouchableOpacity>
-          <Text style={styles.textLimpeza}>Sustentáveis</Text>
-        </View>
+          {/* SANEANTES */}
 
+          <View style={styles.containerButton}>
+            <TouchableOpacity style={styles.buttom}>
+              <Host matchContents>
+                <Icon
+                  source={sanitizer}
+                  size={30}
+                  tint="#7A3FA0"
+                />
+              </Host>
+            </TouchableOpacity>
+            <Text style={styles.text}>Saneantes</Text>
+          </View>
+
+          {/* SUSTENTAVEIS */}
+
+          <View style={styles.containerButton}>
+            <TouchableOpacity style={styles.buttom}>
+              <Host matchContents>
+                <Icon
+                  source={eco}
+                  size={30}
+                  tint="#7A3FA0"
+                />
+              </Host>
+            </TouchableOpacity>
+            <Text style={styles.text}>Sustentáveis</Text>
+          </View>
+
+          {/* HIPOALERGENICO */}
+
+          <View style={styles.containerButton}>
+            <TouchableOpacity style={styles.buttom}>
+              <Host matchContents>
+                <Icon
+                  source={spa}
+                  size={30}
+                  tint="#7A3FA0"
+                />
+              </Host>
+            </TouchableOpacity>
+            <Text style={styles.text}>Sustentáveis</Text>
+          </View>
+        </ScrollView>
 
       </View>
 
@@ -65,14 +125,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
 
-  limpeza: {
+  containerButton: {
     marginHorizontal: 10,
     marginTop: 10,
-    textAlign: 'center'
+    alignItems: 'center'
 
   },
 
-  buttomLimpeza: {
+  buttom: {
     height: 70,
     width: 70,
     backgroundColor: '#F4EEF7',
@@ -83,9 +143,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
 
-  textLimpeza: {
+  text: {
     marginTop: 4,
-    marginLeft: 8,
     fontWeight: '500'
   }
 

@@ -4,6 +4,7 @@ import Input from './Input';
 import CompraConsciente from './CompraConsciente';
 import Header from './Header';
 import Categorias from './Categorias';
+import Recomendados from './Recomendados';
 
 export default function Home() {
   return (
@@ -24,6 +25,11 @@ export default function Home() {
         {/* CATEGORIAS */}
 
         <Categorias />
+
+        {/* Recomendados */}
+
+        <Recomendados />
+
 
       </View>
   );

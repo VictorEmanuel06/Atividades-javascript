@@ -37,9 +37,9 @@ const styles = StyleSheet.create({
 
     caixa_consciente: {
         height: 200,
-        width: 340,
+        width: 390,
         marginTop: 20,
-        marginLeft: 9,
+        marginLeft: 12,
         borderRadius: 12,
         borderWidth: 1,
         borderColor: '#DDD4E2',
