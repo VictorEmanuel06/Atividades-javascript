@@ -27,7 +27,7 @@ export default function Home() {
 
         <Categorias />
 
-        {/* Recomendados */}
+        {/* RECOMENDADOS */}
 
         <Recomendados />
 
