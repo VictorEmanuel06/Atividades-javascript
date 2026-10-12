@@ -5,6 +5,8 @@ import CompraConsciente from './CompraConsciente';
 import Header from './Header';
 import Categorias from './Categorias';
 import Recomendados from './Recomendados';
+import Destaque from './Destaque';
+
 
 export default function Home() {
   return (
@@ -30,6 +32,10 @@ export default function Home() {
         {/* RECOMENDADOS */}
 
         <Recomendados />
+
+        {/* DESTAQUE */}
+
+        <Destaque />
 
 
       </View>
