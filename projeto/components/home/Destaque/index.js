@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import DestaqueCard from '../../DestaqueCard';
 
 export default function Destaque() {
@@ -11,6 +11,14 @@ export default function Destaque() {
             preco: 'R$ 28,40',
             image: require('../../../assets/alvejante.png')
         },
+        {
+            id: 2,
+            nome: 'Panos de Microfibra Multiuso (Kit com 4)',
+            marca: 'FibrasClean',
+            preco: 'R$ 21,90',
+            image: require('../../../assets/panos.png')
+        },
+
     ];
 
     return (
@@ -20,19 +28,21 @@ export default function Destaque() {
                 <Text style={styles.ladoDireito}>Ver catálogo</Text>
             </View>
 
-            <View style={styles.CardDestaque}>
+            <ScrollView horizontal={true}>
+                <View style={styles.CardDestaque}>
 
-                {produtos.map((produto) => (
-                    <DestaqueCard
-                    key={produto.id}
-                    nome={produto.nome}
-                    marca={produto.marca}
-                    preco={produto.preco}
-                    image={produto.image}
-                    />
-                ))}
+                    {produtos.map((produto) => (
+                        <DestaqueCard
+                            key={produto.id}
+                            nome={produto.nome}
+                            marca={produto.marca}
+                            preco={produto.preco}
+                            image={produto.image}
+                        />
+                    ))}
 
-            </View>
+                </View>
+            </ScrollView>
         </View>
 
     );
@@ -54,5 +64,8 @@ const styles = StyleSheet.create({
         color: '#5B2A7A',
         fontWeight: '700',
         fontSize: 15
-    }
+    },
+    CardDestaque: {
+        flexDirection: 'row',
+    },
 })

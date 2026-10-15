@@ -11,7 +11,7 @@ export default function ProductCard(props) {
                 style={styles.image}
             />
 
-            <View>
+            <View style={styles.informacoes}>
                 <Text style={styles.info}>
                     {props.marca}
                 </Text>
@@ -42,13 +42,19 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginHorizontal: 10,
         marginVertical: 10,
-        width: 280,
-        height: 140,
+        width: 285,
+        height: 130,
         borderRadius: 14,
         borderWidth: 2,
         borderColor: '#DDD4E2',
-        paddingTop: 10,
+        paddingTop: 3,
+        flexDirection: 'row',
     },
+    informacoes: {
+        flex: 1,
+        justifyContent: 'center'
+    },
+
     info: {
         color: '#6B6B6B',
     },
@@ -61,12 +67,14 @@ const styles = StyleSheet.create({
 
     h2: {
         fontWeight: '700',
+        marginBottom: 40
     },
 
     preco: {
         fontSize: 18,
         fontWeight: '700',
-        marginTop: 15
+        position: 'absolute',
+        bottom: 18
     },
 
     button: {
